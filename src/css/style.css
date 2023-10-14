@@ -29,6 +29,7 @@ color: #f02aa6;
 
 body {
 	font-family: 'Plus Jakarta Sans', sans-serif;
+    height: 100vh;
 }
 
 /* Container */
@@ -44,6 +45,7 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	padding: 1.5rem;
+    margin-top: 15px;
 }
 
 /* Header */
