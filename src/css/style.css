@@ -1,0 +1,218 @@
+/*
+Color Palette
+
+color: #666CA3;
+color: #13183f;
+color: #83869a;
+color: #f74780;
+color: #ffa7c3;
+color: white;
+
+Gradient Palette
+
+color: #f02aa6;
+color: #ff6f48;
+
+color: #4851ff;
+color: #f02aa6;
+
+*/
+
+/* reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Container */
+.container {
+	margin: 0 auto;
+	max-width: 900px;
+	width: 90%;
+}
+
+/* NavBar */
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem;
+}
+
+/* Header */
+.header {
+	margin: 0 1rem;
+}
+
+.header p {
+	line-height: 1.5;
+	font-weight: 300;
+	margin-bottom: 1.5rem;
+	color: #787a7b;
+	font-size: 1.3rem;
+}
+
+.title {
+	margin: 1rem 0;
+	font-size: 2.2rem;
+}
+
+.mobile-img {
+	display: block;
+	margin: 0 auto;
+	width: 110%;
+}
+
+/* Main */
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Add this line to center vertically */
+    margin-top: 2rem; /* Add margin to push it slightly lower */
+}
+
+.card {
+    flex: 1;
+	max-width: 400px;
+	margin: 10px;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	text-align: left;
+}
+.card h2 {
+	font-size: 1.3rem;
+}
+.card p {
+	font-size: 1rem;
+	color: #555;
+}
+
+.link {
+	display: block;
+	margin-top: 10px;
+	text-decoration: none;
+	color: #f02aa6;
+	font-weight: 500;
+	font-size: 1.2rem;
+	margin-top: 10px;
+}
+
+.background-heading {
+    flex: 2; 
+    background: linear-gradient(#ff6f48, #f02aa6); 
+    padding: 2.75rem 2rem;
+    margin-bottom: 8%;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    color: #fff;
+    text-align: left;
+}
+
+/* Button */
+.btn {
+	display: inline-block;
+	padding: 10px 20px;
+	border-style: none;
+	border-radius: 50px;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	cursor: pointer;
+}
+.btn-black {
+	background-color: #13183f;
+}
+
+.btn-orange {
+	background: linear-gradient(#ff6f48, #f02aa6);
+    font-size: 1.2rem;
+    color: #fff; /* Add text color to ensure visibility */
+    border: none; /* Remove border */
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn-pink {
+	background: linear-gradient(#4851ff, #f02aa6);
+	padding: 20px 40px;
+	font-size: 1rem;
+}
+
+/* Footer */
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: black;
+	padding: 1.3rem;
+}
+
+.footer-light {
+	width: 70%;
+}
+
+@media screen and (min-width: 768px) {
+	/* Styles for screens 768px wide and wider */
+	.nav {
+		padding: 0 8rem;
+		/* border: 2px solid #f02aa6; */
+	}
+	.main {
+		flex-direction: row;
+      
+        justify-content: space-between; 
+	}
+	.card {
+		margin: 10px 0;
+        flex: 0 0 calc(33.333% - 20px);
+	}
+    .card.background-heading {
+        flex: 0 0 calc(100% - 20px); /* Set card 3 to span two rows */
+    }
+	.container {
+		width: 80%;
+	}
+	.header {
+		margin: 5rem 0.8rem;
+		/* border: 2px solid #4851ff; */
+		max-width: 500px;
+	}
+
+	.mobile-img {
+		display: none;
+	}
+
+	.desktop-img {
+		position: fixed;
+		height: 50%;
+		top: -60px;
+		right: -90px;
+	}
+}
+/* Styles for small screens (up to 767px) */
+@media screen and (max-width: 767px) {
+	/* Your mobile-specific styles here */
+	.desktop-img {
+		display: none;
+	}
+	/* Add more mobile-specific styles here */
+}
+
+/* Styles for iPad-sized screens */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	/* Your iPad-specific styles here */
+	.container {
+		width: 100%;
+	}
+}
